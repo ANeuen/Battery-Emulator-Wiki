@@ -4,9 +4,8 @@ title: "CAN add-on MCP2518FD"
 
 ## Why add another CAN channel?
 
-a) You may want to set up a [double](../software/battery_2x.md) or a [triple](../software/battery_3x.md) battery system, then each pack must have its own CAN interface.
-b) Some Inverters do not like to see automotive CAN frames on the CAN channel meant for stationary storage. When they see these messages, they enter a fault state. To get around this, you can add an external CAN interface to the Battery-Emulator hardware, to get a separate, secondary CAN bus.
-
+- You may want to set up a [double](../software/battery_2x.md) or a [triple](../software/battery_3x.md) battery system, then each pack must have its own CAN interface.
+- Some Inverters do not like to see automotive CAN frames on the CAN channel meant for stationary storage. When they see these messages, they enter a fault state. To get around this, you can add an external CAN interface to the Battery-Emulator hardware, to get a separated CAN bus.
 
 ## Why CAN-FD?
 
