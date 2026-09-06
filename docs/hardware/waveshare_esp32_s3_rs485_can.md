@@ -8,13 +8,9 @@ The Waveshare ESP32-S3-RS485-CAN is an affordable and easy to source board. It s
 
 ![image](../images/waveshare-esp32-s3-rs485-can-01.png)
 
-#### Where this hardware shines
+### Where this hardware shines
 
-On setups that require RS485, and have CAN controlled contactors (E.g. Tesla Battery with a Fronius inverter). This board is a more future proof alternative compared to the LilyGo T-CAN485.
-
-!!! info "IMPORTANT"
-    This board is compatible with more than 1 CAN channel and GPIO controlled contactors as from FW 10.10.1!
-
+On setups that require RS485, and have CAN controlled contactors (E.g. Tesla Battery with a Fronius inverter), it's a plug and play solution. This board is a more future proof alternative compared to the LilyGo T-CAN485.
 
 ## Purchase link
 
@@ -23,6 +19,11 @@ The hardware can be bought via sites like AliExpress, or the official [Waveshare
 ## Limitations
 
 This board has a single CAN channel and single RS485 port. The 4-pin SH1.0 connector on the board exposes GPIO1 and GPIO2, which can be configured in firmware settings as either a status LED or an I2C display (see below).
+
+Internal header exposes pins to be used for GPIO controlled contactors and an additional CAN interface.
+
+!!! info "IMPORTANT"
+    You can build a maximum [double battery](../setup/software/battery_2x.md) setup with this unit when used with an RS485 inverter, using its onboard CAN and a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md), as this will mostly max out the available GPIOs on the internal pin header. No way to add a third CAN interface to this board.
 
 ## Optional accessories
 
