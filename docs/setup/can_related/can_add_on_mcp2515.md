@@ -2,6 +2,12 @@
 title: "CAN add‐on (MCP2515)"
 ---
 
+!!! caution "DEPRECATED"
+    MCP2515 is not recommended for use. Choose [CAN-FD MCP2518](can_fd_add_on_mcp2518fd.md) instead.
+
+    The MCP2515 only provides two receive buffers which are read once per loop cycle. This means, if more than two CAN frames arrive within a loop cycle (typically 16ms, possibly longer), frames are dropped. This limitation makes the MCP2515 unsuitable for moderate- to high-speed CAN buses, especially automotive ones. 
+
+
 !!! tip "TIP"
     If you're considering using a Lilygo T-CAN485, you may find the [Lilygo T-2CAN](../../hardware/lilygo_t_2can.md) to be a better choice:
 
@@ -12,9 +18,6 @@ title: "CAN add‐on (MCP2515)"
 
 # Why add another CAN channel?
 Some Inverters do not like to see automotive CAN frames on the CAN channel meant for stationary storage. When they see these messages, they enter a fault state. To get around this, we can add an additional MCP2515 chip to the Battery-Emulator hardware, to get an isolated secondary CAN bus.
-
-- Another options is to use [add on CAN-FD MCP2518](can_fd_add_on_mcp2518fd.md) board 
-- Another option is to use [Stark CMR board](../../hardware/stark_cmr.md)
 
 ## How to add an MCP2515 chip?
 
