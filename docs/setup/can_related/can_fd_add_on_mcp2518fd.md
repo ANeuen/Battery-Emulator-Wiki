@@ -12,17 +12,15 @@ You may want to set up a [double](../software/battery_2x.md) or a [triple](../so
 
 Some batteries use CAN-FD instead of just CAN. Batteries like Kia EV6 are moving towards the faster and more flexible CAN-FD. Most boards, for instance the LilyGo T-CAN485 and T-2CAN, are not compatible with the CAN-FD protocol, but this can be added with an extra MCP2518FD chip via the GPIO pins, similar to the CAN add-on setup.
 
-!!! tip "TIP"
-    The CAN-FD chip can also be used for normal CAN. Just enable the "Use CanFD as classic CAN" , and you can use the add-on chip with classic CAN batteries.
-
 ## Hardware
 
 The hardware used is an inexpensive chip, "MCP2518FD Pro", which can be purchased [HERE](https://www.aliexpress.com/item/1005006433378885.html)
 
 !!! note "NOTE"
-    While the code technically works with MCP2517FD chips, these chips have nasty hardware bugs and should be avoided. Please source MCP2518FD chips instead to ensure proper CAN-FD operation.
+    While the code technically works with MCP2517FD chips, these chips apparently have a hardware bug and should be avoided. Please source **MCP2518FD** chips instead to ensure proper CAN-FD operation.
 
 ### Connecting it to LilyGo T-2CAN
+
 See the [T-2CAN expansion header](../../hardware/lilygo_t_2can.md#expansion-header)
 
 ### Connecting it to LilyGo T-CAN485
@@ -67,26 +65,14 @@ The labelling on this board is slightly different:
     GND (next to 5V) -> Any GND pin on LilyGo (+ to GND on external 5V source)
     5V -> 5V source, can be same as feeds LilyGo via the input pins.
 
-NB: Only one GND connector is technically required if the same ground is being used for the LilyGo
+!!! note "NOTE"
+    Only one GND connector is technically required if the same ground is being used for the board.
 
 ## Software setup
 
 Then configure the component you want to use CANFD on, by selecting "CAN FD (MCP2518 add-on)" on the component that you intend to connect to the chip.
 
 ![image](../../images/can-fd-add-on-mcp2518fd-07.png)
-
-!!! note "NOTE"
-    Remember to configure crystal according to your PCB!
-
-Depending on your add-on board, there may be different oscillator crystals. On the "MCP2518FD Pro" board, it is 40MHz, while on some others, it is 20MHz. If you don’t have a 40MHz oscillator, you need to update `CAN-FD-addon crystal (Mhz):` from `40` to `20` in the settings page.
-
-![image](../../images/can-fd-add-on-mcp2518fd-08.png)
-
-Example picture, board with 40.0Mhz crystal:
-
-![image](../../images/can-fd-add-on-mcp2518fd-04.png)
-
-The default settings are 500kbit/s arbitration bit rate, and 2 Mbit/s data bit rate. Incase you have a battery that needs some other bit rate settings, this can be changed in the Software.ino file.
 
 ## Testing operation
 
