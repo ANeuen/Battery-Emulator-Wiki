@@ -27,7 +27,6 @@ The hardware has more details on LilyGo's Github page
 
 The board comes with 1x CAN channel, and 1x RS485 channel. Some integrations need more than 1 channel, in these cases the LilyGo can be extended with add-on CAN channels:
 
-- [CAN add‐on](../setup/can_related/can_add_on_mcp2515.md)
 - [CAN-FD add on](../setup/can_related/can_fd_add_on_mcp2518fd.md)
 
 Example, LilyGo + MCP2515 board
@@ -57,9 +56,6 @@ To make the board even more professional (DIN mounting solution with CANFD and c
 
 ![image](../images/lilygo-t-can485-06.png)
 
-## Boot button 
-The BOOT button has [special features to enable AP, wipe wifi settings or factory reset the device](../setup/software/boot_button_functions.md)
-
 ## Enhancements notes, things to know
 
 The chip has the tendency to run quite hot. Some people book good results by adding a RAM or Raspberry Pi heatsinks on the chip, reducing the heat.
@@ -79,3 +75,8 @@ If it is outside, in the cold, use a 12V source like [**HDR-60-12**](https://www
 ## 3D-printable parts
 
 You can print your own cases and mounts for this board, check out the [3D‐printable parts page](../setup/hardware/list_of_3d_printable_parts.md).
+
+## See also
+
+- [BOOT button](../setup/software/boot_button_functions.md) for special features to enable AP, wipe wifi settings or factory reset the device
+- [CAN add-on MCP2518FD](../setup/can_related/can_fd_add_on_mcp2518fd.md) for an additional CAN interface
