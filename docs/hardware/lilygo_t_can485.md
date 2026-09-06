@@ -54,7 +54,7 @@ Completed product:
 
 The Lilygo also has a 3V3 to 5V boost switch-mode power supply (it is used for the RS485 chip on the Lilygo). It does not have an overly convenient location for connecting, but it can be soldered to one side of C62 (side closest to C64). The Lilygo can then be powered with 12V, which can be more convenient than powering the Lilygo with 5V. See the red wire in the image below. Of course the 5V supply on the Lilygo must be enabled for this to work.
 
-![image](../../images/can-fd-add-on-mcp2518fd-02.png)
+![image](../images/can-fd-add-on-mcp2518fd-02.png)
 
 ### Expanding the board further
 
