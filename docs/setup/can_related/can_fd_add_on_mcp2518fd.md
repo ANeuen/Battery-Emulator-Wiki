@@ -12,12 +12,12 @@ You may want to set up a [double](../software/battery_2x.md) or a [triple](../so
 
 Some batteries use CAN-FD instead of just CAN. Batteries like Kia EV6 are moving towards the faster and more flexible CAN-FD. Most boards, for instance the LilyGo T-CAN485 and T-2CAN, are not compatible with the CAN-FD protocol, but this can be added with an extra MCP2518FD chip via the GPIO pins, similar to the CAN add-on setup.
 
-## Hardware
-
-The hardware used is an inexpensive chip, "MCP2518FD Pro", which can be purchased [HERE](https://www.aliexpress.com/item/1005006433378885.html)
+The hardware used is an inexpensive chip, **MCP2518FD Pro**, which can be purchased [HERE](https://www.aliexpress.com/item/1005006433378885.html)
 
 !!! note "NOTE"
     While the code technically works with MCP2517FD chips, these chips apparently have a hardware bug and should be avoided. Please source **MCP2518FD** chips instead to ensure proper CAN-FD operation.
+
+## Example connections
 
 ### Connecting it to LilyGo T-2CAN
 
@@ -47,7 +47,7 @@ The Lilygo also has a 3V3 to 5V boost switch-mode power supply (it is used for t
 
 ### Alternative hardware
 
-[Another board](https://www.aliexpress.com/item/1005007349452566.html) built around the same "MCP2518FD Pro" chip has been shown to work once the oscillator is configured to `OSC_20MHz` - see details below
+[Another board](https://www.aliexpress.com/item/1005007349452566.html) built around the same **MCP2518FD Pro** chip has been shown to work. The jumper near the terminal block needs to be seated in order to have the correct 120Ω bus termination.
 
 ![CAN_FD_Lilygo](../../images/can-fd-add-on-mcp2518fd-03.jpg)
 
@@ -70,7 +70,7 @@ The labelling on this board is slightly different:
 
 ## Software setup
 
-Then configure the component you want to use CANFD on, by selecting "CAN FD (MCP2518 add-on)" on the component that you intend to connect to the chip.
+Then configure the component you want to use CANFD on, by selecting **CAN FD (MCP2518 add-on)** on the component that you intend to connect to the chip.
 
 ![image](../../images/can-fd-add-on-mcp2518fd-07.png)
 
