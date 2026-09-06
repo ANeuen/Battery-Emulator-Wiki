@@ -4,18 +4,21 @@ title: "CAN add-on MCP2518FD"
 
 ## Why add another CAN channel?
 
-Some Inverters do not like to see automotive CAN frames on the CAN channel meant for stationary storage. When they see these messages, they enter a fault state. To get around this, we can add an external CAN interface to the Battery-Emulator hardware, to get an isolated secondary CAN bus.
+a) You may want to set up a [double](../software/battery_2x.md) or a [triple](../software/battery_3x.md) battery system, then each pack must have its own CAN interface.
+b) Some Inverters do not like to see automotive CAN frames on the CAN channel meant for stationary storage. When they see these messages, they enter a fault state. To get around this, you can add an external CAN interface to the Battery-Emulator hardware, to get a separate, secondary CAN bus.
 
-You may want to set up a [double](../software/battery_2x.md) or a [triple](../software/battery_3x.md) battery system, then each pack must have its own CAN interface.
 
 ## Why CAN-FD?
 
-Some batteries use CAN-FD instead of just CAN. Batteries like Kia EV6 are moving towards the faster and more flexible CAN-FD. Most boards, for instance the LilyGo T-CAN485 and T-2CAN, are not compatible with the CAN-FD protocol, but this can be added with an extra MCP2518FD chip via the GPIO pins, similar to the CAN add-on setup.
+Some batteries use CAN-FD instead of classical CAN. Batteries like Kia EV6 are moving towards the faster and more flexible CAN-FD. Most boards, for instance the LilyGo T-CAN485 and T-2CAN, are not compatible with the CAN-FD protocol, but this can be added with an extra MCP2518FD chip via the GPIO pins, similar to the CAN add-on setup.
+
+!!! note "ABOUT"
+    **FD** stands for **Flexible Data-Rate** — CAN FD extends classical CAN with up to 64-byte payloads instead of 8, and switches to a faster bit rate (2–8 Mbit/s) after arbitration. Same wiring, same 120 Ω termination, a stronger CRC and no remote frames. The catch: a classical-only controller sees an FD frame as an error and can take the bus down, so every node must be at least FD-tolerant. For ESP32 specifically, the TWAI peripheral is classical-only and not FD-tolerant on the original, S2, S3, and C3. So an ESP32 sitting on a bus that carries FD traffic will fault. The P4 has a proper FD-capable TWAI. Otherwise the usual route is an MCP2518FD on SPI.
 
 The hardware used is an inexpensive chip, **MCP2518FD Pro**, which can be purchased [HERE](https://www.aliexpress.com/item/1005006433378885.html)
 
-!!! note "NOTE"
-    While the code technically works with MCP2517FD chips, these chips apparently have a hardware bug and should be avoided. Please source **MCP2518FD** chips instead to ensure proper CAN-FD operation.
+!!! important "NOTE"
+    While the code technically works with **MCP2517FD** chips, the boards equipped with this apparently have a hardware bug and should be avoided. Please source boards with **MCP2518FD** chips instead to ensure proper CAN-FD operation.
 
 ## Example connections
 
