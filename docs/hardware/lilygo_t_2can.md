@@ -50,7 +50,7 @@ The board comes with 2 CAN channels. One is labelled CAN-A , and the other one i
 
 The interfaces correspond to the following options in the Battery-Emulator software
 
-- CAN-A -> **CAN MCP 2515 Add-on**
+- CAN-A -> **CAN MCP 2518 Add-on**
    - CANLA (CAN-LOW)
    - CANHA (CAN-HIGH)
 - CAN-B -> **Native CAN**
@@ -133,19 +133,13 @@ You can either solder directly to the pads, or attach a 2x13P header and use Dup
 
 #### MCP2518 CAN FD module
 
-![MCP2518 module](../images/lilygo-t-2can-16.png)
-
-A MCP2518 CAN FD module can be connected to the green pins on the diagram above. This can be attached with a 2x5 Dupont connector to the top section of the pin headers (you can make up your own cable with a 2x6 Dupont at the other end for the module). This provides a third non-isolated interface capable of CAN FD (required by some batteries), in addition to the existing two isolated ones.
+An [MCP2518 CAN FD](../setup/can_related/can_fd_add_on_mcp2518fd.md) module can be connected to the green pins on the diagram above. This can be attached with a 2x5 Dupont connector to the top section of the pin headers (you can make up your own cable with a 2x6 Dupont at the other end for the module). This provides a third non-isolated interface capable of CAN FD (required by some batteries), in addition to the existing two isolated ones.
 
 On the T-2CAN FD, this means you can have two CAN FD ports and one CAN (non-FD) port.
 
 #### LED
 
 You can attach a WS2812B LED to the board, connecting to IO35, 5V and GND. It may be easiest to solder this directly to the board using thin jumper wires. It is preferable to use the 5V rather than 3.3V supply as it has more spare capacity.
-
-### Boot button 
-
-The BOOT button has [special features to enable AP, wipe wifi settings or factory reset the device](../setup/software/boot_button_functions.md)
 
 #### Contactors
 
@@ -181,3 +175,8 @@ You can print your own cases and mounts for this board, check out the [3D‐prin
 
 ### Troubleshooting 🔧
 If you see CAN_NATIVE_BUS_ERROR / CANMCP2515_BUS_ERROR events and have problems with CAN interfaces, supply the board with 12V instead of 5V. This stabilizes the CAN hardware significantly
+
+### See also
+
+- [BOOT button](../setup/software/boot_button_functions.md) for special features to enable AP, wipe wifi settings or factory reset the device
+- [CAN add-on MCP2518FD](../setup/can_related/can_fd_add_on_mcp2518fd.md) for an additional CAN interface
