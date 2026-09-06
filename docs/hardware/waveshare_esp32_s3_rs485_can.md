@@ -26,6 +26,12 @@ This board has a single CAN channel and single RS485 port. The 4-pin SH1.0 conne
 
 ## Optional accessories
 
+### Expansion header
+
+The board has pads for a 20-pin 2.0mm-pitch pin header.
+
+![image](../images/waveshare-esp32-s3-rs485-can-04.png){ width="551" height="449" }
+
 ### Status LED (NeoPixel via GPIO2)
 
 The 4-pin SH1.0 connector (located directly behind the USB C connector) can power an optional **Adafruit NeoPixel** (or any WS2812-compatible single LED) connected to GPIO2, providing a visual status indicator.  Please note that the Waveshare only outputs 3.3v!
@@ -45,12 +51,8 @@ In the **Settings** page, set **GPIO 1/2 function** to **I2C Display (SSD1306)**
 !!! note "NOTE"
     The status LED and I2C display are mutually exclusive — only one can be active at a time.
 
-### Expansion header
+### See also
 
-The board has pads for a 20-pin 2.0mm-pitch pin header.
-
-![image](../images/waveshare-esp32-s3-rs485-can-04.png){ width="551" height="449" }
-
-### Boot button 
-The BOOT button has [special features to enable AP, wipe wifi settings or factory reset the device](../setup/software/boot_button_functions.md)
+- [BOOT button](../setup/software/boot_button_functions.md) for special features to enable AP, wipe wifi settings or factory reset the device
+- [CAN add-on MCP2518FD](../setup/can_related/can_fd_add_on_mcp2518fd.md) for an additional CAN interface
 
