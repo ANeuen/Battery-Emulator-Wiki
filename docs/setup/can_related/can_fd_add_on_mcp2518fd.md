@@ -39,12 +39,6 @@ See the [T-2CAN expansion header](../../hardware/lilygo_t_2can.md#expansion-head
     GND (next to 5V) -> Any GND pin on LilyGo (+ to GND on external 5V source)
     5V   -> 5V source, can be same as feeds LilyGo via the input pins.
 
-### Alternative 5V source
-
-The Lilygo also has a 3V3 to 5V boost switch-mode power supply (it is used for the RS485 chip on the Lilygo). It does not have an overly convenient location for connecting, but it can be soldered to one side of C62 (side closest to C64). The Lilygo can then be powered with 12V, which can be more convenient than powering the Lilygo with 5V. See the red wire in the image below. Of course the 5V supply on the Lilygo must be enabled for this to work.
-
-![image](../../images/can-fd-add-on-mcp2518fd-02.png)
-
 ### Alternative hardware
 
 [Another board](https://www.aliexpress.com/item/1005007349452566.html) built around the same **MCP2518FD Pro** chip has been shown to work. The jumper near the terminal block needs to be seated in order to have the correct 120Ω bus termination.
