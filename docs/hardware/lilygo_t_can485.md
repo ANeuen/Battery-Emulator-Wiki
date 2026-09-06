@@ -69,14 +69,8 @@ Above 80 degrees the BE screen turns yellow as a warning, and above 95 degrees d
 Take this into consideration when building enclosures for it.
 If the situation is critical (hot and direct sun), you can use a [Peltier element with fan](https://s.click.aliexpress.com/e/_c4LFUPAt).
 
-The lilygo has an internal voltage regulator, and input is rated at 5-12 volts. 
-Not all lilygos actually work on 5V. A higher input is needed often. 
+The lilygo has an internal voltage regulator, and input is rated at 5-12 volts. Not all lilygos actually work stable on 5V. A higher input is needed often. 
 Some report issues above 12 volts, other run boards fine at 14.4 volts. It is not yet determined what causes these variations.
-
-If the controller is not outside (under 0C temperature), it is recommended to use a PSU like [DC1036P](https://www.aliexpress.com/w/wholesale-DC1036P.html) or Well DC-HALE36-WL (36W).
-If it is outside, in the cold, use a 12V source like [**HDR-60-12**](https://www.meanwell.com/Upload/PDF/HDR-60/HDR-60-SPEC.PDF) and a 12V AGM battery.
-
-![HDR-60-12](../images/lilygo-t-can485-01.jpg)
 
 ## 3D-printable parts
 
