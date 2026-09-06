@@ -49,6 +49,8 @@ The Lilygo also has a 3V3 to 5V boost switch-mode power supply (it is used for t
 
 [Another board](https://www.aliexpress.com/item/1005007349452566.html) built around the same **MCP2518FD Pro** chip has been shown to work. The jumper near the terminal block needs to be seated in order to have the correct 120Ω bus termination.
 
+![MCP2518 module](../../images/lilygo-t-2can-16.png)
+
 ![CAN_FD_Lilygo](../../images/can-fd-add-on-mcp2518fd-03.jpg)
 
 The labelling on this board is slightly different:
