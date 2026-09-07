@@ -27,22 +27,20 @@ The board comes with 1x CAN channel, and 1x RS485 channel. Some integrations nee
 
 - [CAN-FD add on](../setup/can_related/can_fd_add_on_mcp2518fd.md)
 
-Example, LilyGo + MCP2515 board
+Example LilyGo + MCP2515 board:
 
 ![image](../images/lilygo-t-can485-03.png)
 
-### Expanding the board with more IO pins
+### SD socket IO pins
 
 The SD card slot can be used to gain more pins. This can be useful on setups that need lots of inputs/outputs, for instance add-on CAN + contactor control and/or enable line inputs. To use the SD card slot, you will need a "SD Card breakout board"
 
 ![image](../images/lilygo-t-can485-04.png)
 
-By installing one of these breakout boards, you can then remap the src/devboard/hal/hw_lilygo.h file to suit your newfound pins.
-
-- GPIO_NUM_2 corresponds to DAT0  (SD_MISO)
-- GPIO_NUM_13 corresponds to DAT3 (SD_CS)
-- GPIO_NUM_14 corresponds to CLK  (SD_SCLK)
-- GPIO_NUM_15 corresponds to CMD  (SD_MOSI)
+- GPIO 2 corresponds to DAT0  (SD_MISO)
+- GPIO 13 corresponds to DAT3 (SD_CS)
+- GPIO 14 corresponds to CLK  (SD_SCLK)
+- GPIO 15 corresponds to CMD  (SD_MOSI)
 
 Completed product:
 
