@@ -14,7 +14,7 @@ On setups that require RS485, and have CAN controlled contactors (E.g. Tesla Bat
 
 ## Purchase link
 
-The hardware can be bought via sites like AliExpress, or the official [Waveshare](https://www.waveshare.com/esp32-s3-rs485-can.htm)
+The hardware can be bought via sites like AliExpress, or the official [Waveshare](https://www.waveshare.com/esp32-s3-rs485-can.htm) shop.
 
 ## Limitations
 
@@ -25,13 +25,28 @@ Internal header exposes pins to be used for GPIO controlled contactors and an ad
 !!! info "IMPORTANT"
     You can build a maximum [double battery](../setup/software/battery_2x.md) setup with this unit when used with an RS485 inverter, using its onboard CAN and a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md), as this will mostly max out the available GPIOs on the internal pin header. No way to add a third CAN interface to this board.
 
+The plastic case has a bit of a headroom above the USB-C socket which allows for a small cutout to lead the cables from the header:
+
+<img width="850" height="716" alt="kép" src="https://github.com/user-attachments/assets/e30648d4-7e2a-4227-805e-0a043c9d79ce" />
+
+<img width="850" height="716" alt="kép" src="https://github.com/user-attachments/assets/ddf21b38-d2b6-4be7-bd29-0a5d4ab44f1c" />
+
+A Waveshare ESP32-S3-RS485-CAN with a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md) and external contactors control for a [double battery](../setup/software/battery_2x.md) setup:
+
+<img width="1060" height="744" alt="kép" src="https://github.com/user-attachments/assets/86792a4b-a483-4394-9c99-73be8e2d1274" />
+
 ## Optional accessories
 
 ### Expansion header
 
-The board has pads for a 20-pin 2.0mm-pitch pin header.
+The board has pads for a 20-pin **2.0mm** pitch pin header.
 
 ![image](../images/waveshare-esp32-s3-rs485-can-04.png){ width="551" height="449" }
+
+Socket for own soldering: [Aliexpress](https://www.aliexpress.com/item/4000597517515.html)
+Pigtail cable: [Aliexpress](https://www.aliexpress.com/item/1005009728347159.html)
+
+Choose the 2x10p version!
 
 ### Status LED (NeoPixel via GPIO2)
 
