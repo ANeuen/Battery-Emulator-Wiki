@@ -6,13 +6,12 @@ title: "LilyGo T‐CAN485"
 
 The LilyGo T-CAN485 is what the Battery-Emulator originally started development with. It is a very cheap microcontroller, that runs the entire project easily. It has 1x CAN, 1x RS485, and GPIO pins for expansion.
 
-!!! tip "TIP"
-    Only get this board if you need Modbus/RS485. For CAN components, the new [T-2CAN](lilygo_t_2can.md) board is easier for beginners.
-
 ![image](../images/lilygo-t-can485-02.png)
 
 !!! warning "WARNING"
     This board has limited flash memory. Starting from 2027, it might not get new integrations added to it. All other hardware choices are better suited for those seeking new feature development and new integrations.
+
+    A good replacement is [Waveshare ESP32‐S3‐RS485‐CAN](waveshare_esp32_s3_rs485_can.md). For CAN components, the new [T-2CAN](lilygo_t_2can.md) board is a good choice.
 
 ## Purchase link
 
@@ -20,8 +19,7 @@ The hardware can be bought via sites like [AliExpress](https://www.aliexpress.co
 
 ## Hardware info
 
-The hardware has more details on LilyGo's Github page
-[github/Xinyuan-LilyGO](https://github.com/Xinyuan-LilyGO/T-CAN485)
+The hardware has more details on LilyGo's Github page [github/Xinyuan-LilyGO](https://github.com/Xinyuan-LilyGO/T-CAN485)
 
 ## Expanding the board
 
