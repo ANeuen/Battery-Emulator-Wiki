@@ -14,16 +14,40 @@ Some batteries use CAN-FD instead of classical CAN. Batteries like Kia EV6 are m
 !!! note "ABOUT"
     **FD** stands for **Flexible Data-Rate** — CAN FD extends classical CAN with up to 64-byte payloads instead of 8, and switches to a faster bit rate (2–8 Mbit/s) after arbitration. Same wiring, same 120 Ω termination, a stronger CRC and no remote frames. The catch: a classical-only controller sees an FD frame as an error and can take the bus down, so every node must be at least FD-tolerant. For ESP32 specifically, the TWAI peripheral is classical-only and not FD-tolerant on the original, S2, S3, and C3. So an ESP32 sitting on a bus that carries FD traffic will fault. The P4 has a proper FD-capable TWAI. Otherwise the usual route is an MCP2518FD on SPI.
 
-The hardware used is an inexpensive chip, **MCP2518FD Pro**, which can be purchased [HERE](https://www.aliexpress.com/item/1005006433378885.html)
+### Hardware versions
+
+Models based on **MCP2518FD Pro**:
+
+- [Smaller one](https://www.aliexpress.com/item/1005007349452566.html)
+- [Bigger one](https://www.aliexpress.com/item/1005006433378885.html)
 
 !!! important "NOTE"
     While the code technically works with **MCP2517FD** chips, the boards equipped with this apparently have a hardware bug and should be avoided. Please source boards with **MCP2518FD** chips instead to ensure proper CAN-FD operation.
 
 ## Example connections
 
-### Connecting it to LilyGo T-2CAN
+The smaller model needs the jumper near the terminal block needs to be seated in order to have the correct 120Ω bus termination.
 
-See the [T-2CAN expansion header](../../hardware/lilygo_t_2can.md#expansion-header)
+![MCP2518 module](../../images/lilygo-t-2can-16.png)
+
+![CAN_FD_Lilygo](../../images/can-fd-add-on-mcp2518fd-03.jpg)
+
+Labeling:
+
+    MCP2518FD -> Lilygo
+    ___________________
+    SCK -> IO 12
+    SDI -> IO 5
+    SDO -> IO 34
+    nCS -> IO 18
+    INT -> IO 35
+    GND (next to 3V3) -> Any GND pin on LilyGo
+    3V3 -> VDD on LilyGo
+    GND (next to 5V) -> Any GND pin on LilyGo (+ to GND on external 5V source)
+    5V -> 5V source, can be same as feeds LilyGo via the input pins.
+
+!!! note "NOTE"
+    Only one GND connector is technically required if the same ground is being used for the board.
 
 ### Connecting it to LilyGo T-CAN485
 
@@ -41,30 +65,10 @@ See the [T-2CAN expansion header](../../hardware/lilygo_t_2can.md#expansion-head
     GND (next to 5V) -> Any GND pin on LilyGo (+ to GND on external 5V source)
     5V   -> 5V source, can be same as feeds LilyGo via the input pins.
 
-### Alternative hardware
 
-[Another board](https://www.aliexpress.com/item/1005007349452566.html) built around the same **MCP2518FD Pro** chip has been shown to work. The jumper near the terminal block needs to be seated in order to have the correct 120Ω bus termination.
+### Connecting it to LilyGo T-2CAN
 
-![MCP2518 module](../../images/lilygo-t-2can-16.png)
-
-![CAN_FD_Lilygo](../../images/can-fd-add-on-mcp2518fd-03.jpg)
-
-The labelling on this board is slightly different:
-
-    MCP2518FD -> Lilygo
-    ___________________
-    SCK -> IO 12
-    SDI -> IO 5
-    SDO -> IO 34
-    nCS -> IO 18
-    INT -> IO 35
-    GND (next to 3V3) -> Any GND pin on LilyGo
-    3V3 -> VDD on LilyGo
-    GND (next to 5V) -> Any GND pin on LilyGo (+ to GND on external 5V source)
-    5V -> 5V source, can be same as feeds LilyGo via the input pins.
-
-!!! note "NOTE"
-    Only one GND connector is technically required if the same ground is being used for the board.
+See the [T-2CAN expansion header](../../hardware/lilygo_t_2can.md#expansion-header)
 
 ## Software setup
 
@@ -91,6 +95,10 @@ Example where wires connected (Everything works, TX and RX incoming on native)
 ## Logging CAN-FD messages
 
 It is possible to log CAN messages via USB serial or Webserver, see the [CAN logging page](can_logging.md) for more info.
+
+## 3D-printable parts
+
+You can print your own DIN mount for this board, check out the [3D‐printable parts page](../hardware/list_of_3d_printable_parts.md).
 
 ## See Also
 
