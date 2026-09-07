@@ -43,8 +43,8 @@ The board has pads for a 20-pin **2.0mm** pitch pin header.
 
 ![image](../images/waveshare-esp32-s3-rs485-can-04.png){ width="551" height="449" }
 
-Socket for own soldering: [Aliexpress](https://www.aliexpress.com/item/4000597517515.html)
-Pigtail cable: [Aliexpress](https://www.aliexpress.com/item/1005009728347159.html)
+Socket for own soldering: [Aliexpress](https://www.aliexpress.com/item/4000597517515.html), 
+Pigtail cable: [Aliexpress](https://www.aliexpress.com/item/1005009728347159.html).
 
 Choose the 2x10p version!
 
