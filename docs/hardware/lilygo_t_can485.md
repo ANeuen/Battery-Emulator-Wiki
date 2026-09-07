@@ -56,12 +56,6 @@ The Lilygo also has a 3V3 to 5V boost switch-mode power supply (it is used for t
 
 ![image](../images/can-fd-add-on-mcp2518fd-02.png)
 
-### Expanding the board further
-
-To make the board even more professional (DIN mounting solution with CANFD and contactor drivers built in), you can get the [LilyGo T‐CAN485 & CAN‐FD Motherboard](lilygo_t_can485_and_can_fd_motherboard.md)
-
-![image](../images/lilygo-t-can485-06.png)
-
 ### CAN-FD Motherboard
 
 This is work in progress **BETA** PCB design for a motherboard to hold both a lillygo T-CAN485, a CAN FD board and a smart highside power switch for contactors. Requires a small amount of SMD soldering. You will need to desolder the output connectors on the lillygo + can FD board.
