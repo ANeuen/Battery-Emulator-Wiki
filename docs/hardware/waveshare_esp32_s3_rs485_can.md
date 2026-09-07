@@ -14,7 +14,7 @@ On setups that require RS485, and have CAN controlled contactors (E.g. Tesla Bat
 
 ## Purchase link
 
-The hardware can be bought via sites like AliExpress, or the official [Waveshare](https://www.waveshare.com/esp32-s3-rs485-can.htm)
+The hardware can be bought via sites like AliExpress, or the official [Waveshare](https://www.waveshare.com/esp32-s3-rs485-can.htm) shop.
 
 ## Limitations
 
@@ -25,13 +25,28 @@ Internal header exposes pins to be used for GPIO controlled contactors and an ad
 !!! info "IMPORTANT"
     You can build a maximum [double battery](../setup/software/battery_2x.md) setup with this unit when used with an RS485 inverter, using its onboard CAN and a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md), as this will mostly max out the available GPIOs on the internal pin header. No way to add a third CAN interface to this board.
 
+The plastic case has a bit of a headroom above the USB-C socket which allows for a small cutout to lead the cables from the header:
+
+![kép](../images/waveshare-esp32-s3-rs485-can-05.png)
+
+![kép](../images/waveshare-esp32-s3-rs485-can-06.png)
+
+A Waveshare ESP32-S3-RS485-CAN with a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md) and external contactors control for a [double battery](../setup/software/battery_2x.md) setup:
+
+![kép](../images/waveshare-esp32-s3-rs485-can-07.png)
+
 ## Optional accessories
 
 ### Expansion header
 
-The board has pads for a 20-pin 2.0mm-pitch pin header.
+The board has pads for a 20-pin **2.0mm** pitch pin header.
 
 ![image](../images/waveshare-esp32-s3-rs485-can-04.png){ width="551" height="449" }
+
+Socket for own soldering: [Aliexpress](https://www.aliexpress.com/item/4000597517515.html), 
+Pigtail cable: [Aliexpress](https://www.aliexpress.com/item/1005009728347159.html).
+
+Choose the 2x10p version!
 
 ### Status LED (NeoPixel via GPIO2)
 
