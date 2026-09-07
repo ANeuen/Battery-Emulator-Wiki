@@ -25,15 +25,15 @@ Internal header exposes pins to be used for GPIO controlled contactors and an ad
 !!! info "IMPORTANT"
     You can build a maximum [double battery](../setup/software/battery_2x.md) setup with this unit when used with an RS485 inverter, using its onboard CAN and a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md), as this will mostly max out the available GPIOs on the internal pin header. No way to add a third CAN interface to this board.
 
-The plastic case has a bit of a headroom above the USB-C socket which allows for a small cutout to lead the cables from the header:
-
-![kép](../images/waveshare-esp32-s3-rs485-can-05.png)
-
-![kép](../images/waveshare-esp32-s3-rs485-can-06.png)
-
 A Waveshare ESP32-S3-RS485-CAN with a [second CAN interface](../setup/can_related/can_fd_add_on_mcp2518fd.md) and external contactors control for a [double battery](../setup/software/battery_2x.md) setup:
 
-![kép](../images/waveshare-esp32-s3-rs485-can-07.png)
+![image](../images/waveshare-esp32-s3-rs485-can-07.png)
+
+The plastic case has a bit of a headroom above the USB-C socket which allows for a small cutout to lead the cables from the header:
+
+![image](../images/waveshare-esp32-s3-rs485-can-05.png)
+
+![image](../images/waveshare-esp32-s3-rs485-can-06.png)
 
 ## Optional accessories
 
