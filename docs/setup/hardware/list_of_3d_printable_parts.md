@@ -6,11 +6,11 @@ Here's a collection of 3D-printable parts that you can utilize in your build.
 
 ## Board fixtures / enclosures
 
-- LilyGo DIN rail: [Thingiverse - DIN Rail enclosure for Lilygo T-CAN-485 Module](https://www.thingiverse.com/thing:6788996)
-- LilyGo DIN rail: [Thingiverse - DIN Rail enclosure for Lilygo T-CAN-485 Module with beter ventilation](https://www.thingiverse.com/thing:7029497)
-- LilyGo Vertical DIN-rail case: [Lilygo T-CAN485 dinrail case](https://www.printables.com/model/1312677-lilygo-t-can485-dinrail-case)
+- LilyGo T‐CAN485 DIN rail: [DIN Rail enclosure](https://www.thingiverse.com/thing:6788996)
+- LilyGo T‐CAN485 DIN rail: [DIN Rail enclosure with beter ventilation](https://www.thingiverse.com/thing:7029497)
+- LilyGo T‐CAN485 Vertical DIN-rail case: [vertical case](https://www.printables.com/model/1312677-lilygo-t-can485-dinrail-case)
 - LilyGo T_2CAN case: [LilyGo T-2CAN case](https://www.thingiverse.com/thing:7172799)
-- LilyGo T_2CAN case with LCD and DIN rail support [LilyGO T2 CAN + Display DIN Rail Mount](https://www.printables.com/model/1567398-lilygo-t2-can-display-din-rail-mount)
+- LilyGo T_2CAN case [with LCD and DIN rail support](https://www.printables.com/model/1567398-lilygo-t2-can-display-din-rail-mount)
 - LilyGo T_2CAN [Open Frame DIN](https://www.thingiverse.com/thing:7278747)
 - MCP2518FD Pro add-on board [DIN rail holder](https://www.printables.com/model/1835246-mcp2518fd-pro-board-din-rail-holder)
 
