@@ -10,11 +10,11 @@ The Waveshare ESP32-S3-RS485-CAN is an affordable and easy to source board. It s
 
 ### Where this hardware shines
 
-On setups that require RS485, and have CAN controlled contactors (E.g. Tesla Battery with a Fronius inverter), it's a plug and play solution. This board is a more future proof alternative compared to the LilyGo T-CAN485.
+On setups that require RS485, and have CAN controlled contactors (E.g. Tesla Battery with a Fronius inverter), it's a plug and play solution. This board is a more future proof alternative compared to the [LilyGo T-CAN485](lilygo_t_can485.md).
 
 ## Purchase link
 
-The hardware can be bought via sites like AliExpress, or the official [Waveshare](https://www.waveshare.com/esp32-s3-rs485-can.htm) shop.
+The hardware can be bought via sites like Amazon, AliExpress, or the official [Waveshare](https://www.waveshare.com/esp32-s3-rs485-can.htm) shop.
 
 ## Limitations
 
@@ -39,14 +39,14 @@ A Waveshare ESP32-S3-RS485-CAN with a [second CAN interface](../setup/can_relate
 
 ### Expansion header
 
-The board has pads for a 20-pin **2.0mm** pitch pin header.
+The board has pads for a 20-pin **2.0mm** pitch pin header:
 
 ![image](../images/waveshare-esp32-s3-rs485-can-04.png){ width="551" height="449" }
 
-Socket for own soldering: [Aliexpress](https://www.aliexpress.com/item/4000597517515.html), 
-Pigtail cable: [Aliexpress](https://www.aliexpress.com/item/1005009728347159.html).
+Socket for own soldering: [AliExpress](https://www.aliexpress.com/item/4000597517515.html), 
+Pigtail cable: [AliExpress](https://www.aliexpress.com/item/1005009728347159.html).
 
-Choose the 2x10p version!
+Choose the **2x10p** version!
 
 ### Status LED (NeoPixel via GPIO2)
 
